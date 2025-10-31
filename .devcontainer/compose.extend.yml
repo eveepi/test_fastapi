@@ -1,0 +1,9 @@
+services:
+  fastapi:
+    build:
+      target: dev
+    volumes:
+    - .:/app
+    environment:
+      ENV: development
+    command: fastapi dev src/api_v1/main.py --host 0.0.0.0 --port 8000

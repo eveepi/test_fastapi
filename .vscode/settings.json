@@ -1,0 +1,21 @@
+{
+    "python.testing.pytestArgs": [
+        "src"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.languageServer": "Pylance",
+    // pylint
+    "pylint.enabled": true,
+    "pylint.cwd": "${workspaceFolder}/src",
+    "pylint.importStrategy": "fromEnvironment",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "cSpell.words": [
+        "pylint"
+    ]
+
+
+}

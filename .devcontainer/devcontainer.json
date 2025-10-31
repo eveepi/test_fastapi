@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "fastapi",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": [
+		"../docker-compose.yml", 
+		"compose.extend.yml"
+	],
+	"service": "fastapi",
+	"workspaceFolder": "/app",
+	"shutdownAction": "stopCompose",
+	
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"ms-python.black-formatter",
+				"DavidAnson.vscode-markdownlint"
+            ]
+        }
+    },
+	"forwardPorts": [
+		"fastapi:8000"
+	],
+	"portsAttributes": {
+		"fastapi:8000": {
+			"label": "FastAPI",
+			"onAutoForward": "notify"
+		}
+	}
+}
